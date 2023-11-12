@@ -183,8 +183,6 @@ const Header = ({ data = {}, isTransparent, onSetup = () => {} }) => {
                         useMegaNav
                       />
                     )}
-
-                    <CartToggle />
                   </div>
                 </div>
               </nav>
