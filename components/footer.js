@@ -41,8 +41,8 @@ const Footer = ({ data = {} }) => {
             {/* Put our extras in the last block */}
             {key === 3 && (
               <div className="footer--extras">
-                <ThemeSwitch />
-
+                
+                {/* <ThemeSwitch />*/}
                 <div className="footer--disclaimer">
                   <p>&copy; {new Date().getFullYear()}. All Rights Reserved.</p>
                 </div>
