@@ -159,8 +159,6 @@ const Header = ({ data = {}, isTransparent, onSetup = () => {} }) => {
                       />
                     </div>
                   </FocusTrap>
-
-                  <CartToggle />
                 </div>
 
                 {/* Desktop Header Menu */}
@@ -209,24 +207,6 @@ const Header = ({ data = {}, isTransparent, onSetup = () => {} }) => {
 
       <span ref={observe} className="header--observer" />
     </>
-  )
-}
-
-const CartToggle = () => {
-  const toggleCart = useToggleCart()
-  const cartCount = useCartCount()
-
-  return (
-    <button className="cart-toggle" onClick={() => toggleCart()}>
-      Cart
-      <span
-        className={cx('cart-toggle--count', {
-          'is-active': cartCount > 0,
-        })}
-      >
-        {cartCount}
-      </span>
-    </button>
   )
 }
 

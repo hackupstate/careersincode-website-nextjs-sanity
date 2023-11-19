@@ -6,7 +6,10 @@ import {
   FaSpotify,
   FaTwitter,
   FaYoutube,
-  FaGithub
+  FaGithub,
+  FaMediumM,
+  FaLinkedinIn,
+  FaSlack
 } from 'react-icons/fa'
 
 const getIcon = icon => {
@@ -27,6 +30,12 @@ const getIcon = icon => {
       return FaYoutube
     case 'Github':
       return FaGithub
+    case 'Medium':
+      return FaMediumM
+    case 'LinkedIn':
+      return FaLinkedinIn
+    case 'Slack':
+      return FaSlack;
     default:
       return false
   }
@@ -54,7 +63,10 @@ export default {
           { title: 'Spotify', value: 'Spotify' },
           { title: 'Twitter', value: 'Twitter' },
           { title: 'YouTube', value: 'YouTube' },
-          { title: 'Github', value: 'Github' }
+          { title: 'Github', value: 'Github' },
+          { title: 'Medium', value: 'Medium' },
+          { title: 'LinkedIn', value: 'LinkedIn' },
+          { title: 'Slack', value: 'Slack' }
         ]
       }
     },
