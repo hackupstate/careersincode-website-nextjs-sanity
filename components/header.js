@@ -87,12 +87,12 @@ const Header = ({ data = {}, isTransparent, onSetup = () => {} }) => {
                     aria-label="Go Home"
                     onClick={() => window.scrollTo(0, 0)}
                   >
-                    <img src='https://ai-gc.netlify.app/logo.png' style={{maxWidth: 200}}/>
+                    <img src='https://ai-gc.netlify.app/logo.png' style={{maxWidth: 200}} alt="Careers in Code logo"/>
                   </button>
                 ) : (
                   <Link href="/" scroll={false}>
                     <a className="logo--link" aria-label="Go Home">
-                    <img src='https://ai-gc.netlify.app/logo.png' style={{maxWidth: 200}} />
+                    <img src='https://ai-gc.netlify.app/logo.png' style={{maxWidth: 200}} alt="Careers in Code logo" />
                     </a>
                   </Link>
                 )}

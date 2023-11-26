@@ -62,13 +62,12 @@ const Layout = ({ site = {}, page = {}, schema, children }) => {
           }}
         />
       )}
-
+{/*variants={pageTransitionAnim} */}
       <m.div
         key={page.id}
         initial="hide"
         animate="show"
         exit="hide"
-        variants={pageTransitionAnim}
         style={headerHeight ? { '--headerHeight': `${headerHeight}px` } : null}
       >
         <CookieBar data={site.cookieConsent} />
