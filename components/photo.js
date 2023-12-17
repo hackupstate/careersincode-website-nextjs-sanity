@@ -57,6 +57,7 @@ const Photo = ({
   // trigger any onLoad callbacks
   useEffect(() => {
     if (isLoaded) onLoad?.()
+    console.log(photo)
   }, [isLoaded])
 
   return (
@@ -72,6 +73,15 @@ const Photo = ({
             ref={observe}
             width={width}
             height={height}
+            /*style={
+              (photo.alt !== "A Careers in Code class") ? 
+              {
+                maxWidth: 400,
+                objectFit: 'contain'
+              }
+              :
+              {}
+            } */
             src={forceLoad || inView ? src : null}
             srcSet={forceLoad || inView ? srcset : null}
             sizes={sizes}
