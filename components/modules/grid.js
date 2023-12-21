@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import cx from 'classnames'
 
 import ProductCard from '@components/product-card'
@@ -6,7 +6,7 @@ import Freeform from '@components/freeform'
 import AccordionList from '@components/accordion-list'
 
 const Grid = ({ data = {} }) => {
-  const { size, columns } = data
+  const { size, Color, columns } = data
 
   const getGridSize = (
     breakpoint,

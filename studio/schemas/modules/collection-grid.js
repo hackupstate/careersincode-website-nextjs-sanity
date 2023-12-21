@@ -11,7 +11,7 @@ export default {
       name: 'active',
       type: 'boolean',
       initialValue: true
-    }
+    },
   ],
   preview: {
     prepare() {

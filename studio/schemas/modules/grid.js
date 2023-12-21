@@ -17,6 +17,21 @@ export default {
         message: `Grids are first defined by the number of "spaces" they should have. Visually, you can think of this like available cells in a spreadsheet or table. Then, we define the columns that should exist within this grid, and what "space(s)" they should occupy at different screen sizes.`
       }
     },
+    /*{
+      title: "Color",
+      name: "Color",
+      type: "string",
+      description: "Display Text",
+      validation: Rule => Rule.required(),
+      options: {
+        list: [
+          { title: "white", value: "white"},
+          { title: "Dark Blue", value: "#002333"},
+          { title: "Light Blue", value: "#33d5c3"},
+        ]
+      },
+      initialValue: "white"
+    },*/
     {
       title: 'Grid Size',
       name: 'size',

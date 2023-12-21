@@ -20,10 +20,6 @@ const getIcon = icon => {
       return FaFacebookF
     case 'Instagram':
       return FaInstagram
-    case 'Soundcloud':
-      return FaSoundcloud
-    case 'Spotify':
-      return FaSpotify
     case 'Twitter':
       return FaTwitter
     case 'YouTube':

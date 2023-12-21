@@ -57,31 +57,37 @@ const Photo = ({
   // trigger any onLoad callbacks
   useEffect(() => {
     if (isLoaded) onLoad?.()
-    console.log(photo)
   }, [isLoaded])
 
   return (
-    <figure className={className ? className : null}>
+    <figure className={className ? className : null} style={
+      (photo.alt == "Instructor/Student") ? 
+      {
+        minWidth: '30vw',
+      }
+      :
+      {}
+    }>
       <div
         className={cx('ar', {
           'has-fill': layout === 'fill' || layout === 'contain',
         })}
         style={aspectCustom}
       >
-        <picture>
           <img
             ref={observe}
             width={width}
             height={height}
-            /*style={
-              (photo.alt !== "A Careers in Code class") ? 
+            style={
+              (photo.alt == "Instructor/Student") ? 
               {
-                maxWidth: 400,
+                minWidth: '30vw',
+                minHeight: '30vh',
                 objectFit: 'contain'
               }
               :
               {}
-            } */
+            }
             src={forceLoad || inView ? src : null}
             srcSet={forceLoad || inView ? srcset : null}
             sizes={sizes}
@@ -90,7 +96,6 @@ const Photo = ({
             alt={photo.alt || photo.asset?.altText}
             className={cx(getSize(layout), { 'is-loaded': isLoaded })}
           />
-        </picture>
 
         {hasPlaceholder && (
           <div className={cx('ar--placeholder', { 'is-loaded': isLoaded })}>
