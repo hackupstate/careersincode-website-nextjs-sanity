@@ -66,6 +66,11 @@ const Photo = ({
         minWidth: '30vw',
       }
       :
+      (photo.alt == "Company") ? 
+      {
+        minWidth: '20vw',
+      }
+      :
       {}
     }>
       <div
@@ -83,6 +88,12 @@ const Photo = ({
               {
                 minWidth: '30vw',
                 minHeight: '30vh',
+                objectFit: 'contain'
+              }
+              :
+              (photo.alt == "Company") ? 
+              {
+                minWidth: '20vw',
                 objectFit: 'contain'
               }
               :
