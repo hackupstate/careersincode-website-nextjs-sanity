@@ -160,6 +160,7 @@ export const modules = `
     _type,
     _key,
     size,
+    Color,
     columns[]{
       sizes[]{
         breakpoint,

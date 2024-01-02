@@ -18,7 +18,7 @@ import {
 import Cart from '@components/cart'
 
 // Console Credits
-if (isBrowser) {
+/*if (isBrowser) {
   console.groupCollapsed(
     '%c💀 Site Credits',
     'display:block;padding:0.125em 1em;font-family:courier;font-size:14px;font-weight:bold;line-height:2;text-transform:uppercase;background:black;color:white;'
@@ -32,7 +32,7 @@ if (isBrowser) {
     'display:block;font-family:courier;font-size:12px;font-weight:bold;line-height:1;color:black;'
   )
   console.groupEnd()
-}
+}*/
 
 const Site = ({ Component, pageProps, router }) => {
   const togglePageTransition = useTogglePageTransition()

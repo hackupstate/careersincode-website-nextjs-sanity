@@ -6,7 +6,7 @@ import Freeform from '@components/freeform'
 import AccordionList from '@components/accordion-list'
 
 const Grid = ({ data = {} }) => {
-  const { size, Color, columns } = data
+  const { size, columns, Color } = data
 
   const getGridSize = (
     breakpoint,
@@ -36,7 +36,15 @@ const Grid = ({ data = {} }) => {
   }
 
   return (
-    <section className="section">
+    <section className="section" style={
+      (Color === "#002333") ? ({
+        color: 'white',
+        backgroundColor: Color
+      }) : ({
+        color: 'black',
+        backgroundColor: Color
+      })
+    }>
       <div className="section--content">
         <div
           className={`grid grid-cols-${size} gap-x-16 gap-y-16 sm:gap-x-32 lg:gap-x-48`}
