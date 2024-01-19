@@ -63,12 +63,19 @@ const Photo = ({
     <figure className={className ? className : null} style={
       (photo.alt == "Instructor/Student") ? 
       {
-        minWidth: '30vw',
+        width: '20vw',
+        alignSelf: 'center',
+        marginLeft: '3vw'
+      }
+      :
+      (photo.alt == "Medium Post") ? 
+      {
+        minWidth: '20vw'
       }
       :
       (photo.alt == "Company") ? 
       {
-        minWidth: '20vw',
+        minWidth: '20vw'
       }
       :
       {}

@@ -126,7 +126,6 @@ export const pagesMenu = S.listItem()
       .title('Pages')
       .items([
         currentHomePage,
-        currentShopPage,
         currentErrorPage,
         S.listItem()
           .title('Other Pages')

@@ -22,7 +22,7 @@
     @apply py-4 px-8 bg-transparent border-transparent;
 
     &:hover {
-      background: hsla(var(--pageText-hsl), .1);
+      background-color: hsla(var(--pageBG-hsl), .1)
     }
 
     &.is-disabled,
@@ -40,7 +40,12 @@
 
   /* large sized button */
   &.is-large {
-    @apply text-24 leading-125 font-normal px-28;
+    @apply text-24 leading-125 font-normal px-28 m-15;
+
+    &:hover {
+      background-color: transparent;
+      color: white;
+    }
   }
 
   /* full width button */

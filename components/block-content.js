@@ -8,12 +8,14 @@ const Content = ({ blocks, className }) => {
   if (!blocks) return null
 
   return (
-    <BlockContent
-      renderContainerOnSingleChild
-      className={cx('rc', className)}
-      blocks={blocks}
-      serializers={blockSerializers}
-    />
+    <div className='container'>
+      <BlockContent
+        renderContainerOnSingleChild
+        className={cx('rc', className)}
+        blocks={blocks}
+        serializers={blockSerializers}
+      />
+    </div>
   )
 }
 
