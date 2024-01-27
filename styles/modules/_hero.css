@@ -1,6 +1,6 @@
 .hero {
   @apply grid relative overflow-hidden border-b;
-  height: calc(var(--vh, 1vh) * 60);
+  min-height: calc(var(--vh, 1vh) * 60);
   
   &--bg {
     @apply relative w-full  h-full;

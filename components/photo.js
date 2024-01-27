@@ -64,8 +64,7 @@ const Photo = ({
       (photo.alt == "Instructor/Student") ? 
       {
         width: '20vw',
-        alignSelf: 'center',
-        marginLeft: '3vw'
+        alignSelf: 'center'
       }
       :
       (photo.alt == "Medium Post") ? 
@@ -75,7 +74,8 @@ const Photo = ({
       :
       (photo.alt == "Company") ? 
       {
-        minWidth: '20vw'
+        minWidth: '20vw',
+        margin: '2vw'
       }
       :
       {}
