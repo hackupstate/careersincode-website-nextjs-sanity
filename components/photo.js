@@ -59,11 +59,39 @@ const Photo = ({
     if (isLoaded) onLoad?.()
   }, [isLoaded])
 
+  const [isMobileScreen, setIsMobileScreen] = useState(
+    typeof window !== 'undefined' && window.innerWidth < 700
+  )
+
+  // update isMobileScreen when window size changes
+  useEffect(() => {
+    function handleResize() {
+      setIsMobileScreen(window.innerWidth < 700)
+    }
+
+    window.addEventListener('resize', handleResize)
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
+
   return (
     <figure className={className ? className : null} style={
-      (photo.alt == "Instructor/Student") ? 
+      (photo.alt == "Instructor/Student" && isMobileScreen) ? 
       {
-        width: '20vw',
+        width: '100%',
+        height: '30vh',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        alignSelf: 'center',
+        padding: '0',
+        margin: '0'
+      }
+      :
+      (photo.alt == "Instructor/Student" && !isMobileScreen) ? 
+      {
+        width: '30vw',
         alignSelf: 'center'
       }
       :
@@ -84,14 +112,34 @@ const Photo = ({
         className={cx('ar', {
           'has-fill': layout === 'fill' || layout === 'contain',
         })}
-        style={aspectCustom}
+        style={{
+          ...aspectCustom,
+          ...(photo.alt == "Instructor/Student" && isMobileScreen) ? 
+          {
+            width: '30vw',
+            height: '30vh',
+          }
+          :
+          {}
+        }}
       >
           <img
             ref={observe}
             width={width}
             height={height}
             style={
-              (photo.alt == "Instructor/Student") ? 
+              (photo.alt == "Instructor/Student" && isMobileScreen) ? 
+              {
+                width: '30vw',
+                height: '30vh',
+                minWidth: '30vw',
+                minHeight: '30vh',
+                maxWidth: '30vw',
+                maxHeight: '30vh',
+                objectFit: 'contain'
+              }
+              :
+              (photo.alt == "Instructor/Student" && !isMobileScreen) ? 
               {
                 minWidth: '30vw',
                 minHeight: '30vh',

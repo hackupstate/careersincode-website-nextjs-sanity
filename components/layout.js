@@ -75,10 +75,7 @@ const Layout = ({ site = {}, page = {}, schema, children }) => {
           isTransparent={page.hasTransparentHeader}
           onSetup={({ height }) => setHeaderHeight(height)}
         />
-        <main id="content" style={{
-          maxWidth: '1500px',
-          alignSelf: 'center',
-        }}>
+        <main id="content">
         {children}
         </main>
         <Footer data={site.footer} />

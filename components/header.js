@@ -48,20 +48,6 @@ const Header = ({ data = {}, isTransparent, onSetup = () => {} }) => {
     }
   }
 
-  const handleViewportChange = () => {
-    if (window.innerWidth < 1200) {
-      //toggleMobileNav(true)
-    }
-  }
-
-  useEffect(() => {
-    window.addEventListener('resize', handleViewportChange);
-    return () => {
-      window.removeEventListener('resize', handleViewportChange);
-    }
-  }, []);
-
-
   // context helpers
   const { meganav } = useSiteContext()
   const toggleMegaNav = useToggleMegaNav()

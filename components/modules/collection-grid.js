@@ -190,6 +190,7 @@ const Collection = ({ data = {} }) => {
           className={cx('collection--grid', {
             'is-empty': !orderedProducts.length,
           })}
+          
         >
           {paginatedProducts.map((product, key) => (
             <ProductCard

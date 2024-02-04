@@ -45,9 +45,12 @@ const Grid = ({ data = {} }) => {
         backgroundColor: Color
       })
     }>
-      <div className="section--content">
+      <div className="section--content" style={{ display: 'flex', justifyContent: 'center'}}>
         <div
           className={`grid grid-cols-${size} gap-x-16 gap-y-16 sm:gap-x-32 lg:gap-x-48`}
+          style={{
+            maxWidth: '1150px',
+          }}
         >
           {columns.map((col, key) => {
             const { sizes, blocks } = col
