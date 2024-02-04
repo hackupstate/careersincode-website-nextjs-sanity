@@ -62,7 +62,7 @@ const Layout = ({ site = {}, page = {}, schema, children }) => {
           }}
         />
       )}
-{/*variants={pageTransitionAnim} */}
+      {/*variants={pageTransitionAnim} */}
       <m.div
         key={page.id}
         initial="hide"
@@ -70,13 +70,17 @@ const Layout = ({ site = {}, page = {}, schema, children }) => {
         exit="hide"
         style={headerHeight ? { '--headerHeight': `${headerHeight}px` } : null}
       >
-        <CookieBar data={site.cookieConsent} />
         <Header
           data={site.header}
           isTransparent={page.hasTransparentHeader}
           onSetup={({ height }) => setHeaderHeight(height)}
         />
-        <main id="content">{children}</main>
+        <main id="content" style={{
+          maxWidth: '1500px',
+          alignSelf: 'center',
+        }}>
+        {children}
+        </main>
         <Footer data={site.footer} />
       </m.div>
     </>

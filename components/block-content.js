@@ -8,7 +8,7 @@ const Content = ({ blocks, className }) => {
   if (!blocks) return null
 
   return (
-    <div className='container'>
+    <div>
       <BlockContent
         renderContainerOnSingleChild
         className={cx('rc', className)}
