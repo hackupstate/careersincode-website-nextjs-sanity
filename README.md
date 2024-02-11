@@ -6,17 +6,33 @@
    ```bash
    git clone https://github.com/hackupstate/careersincode-website-nextjs-sanity.git
    ```
+
+   ```bash
+   cd careersincode-website-nextjs-sanity/studio/
+   ```
 2. Ensure that the Sanity CLI is installed globally.
-3. Run the following commands in the `/studio` folder:
+3. Once in the `/studio` folder, run the following commands:
    ```bash
    yarn
+   ```
+   ```bash
    sanity init
    ```
-   During Sanity's initialization, reconfigure it using the Careers in Code Sanity Studio credentials when prompted (Type Y and hit enter).
+   During Sanity's initialization, reconfigure it using the Careers in Code Sanity Studio credentials when prompted (Type Y and hit enter). Use the following options when prompted:
+      Continue creating a Sanity Studio v3 project?: Yes
+      Select project to use: Careers-In-Code [z6et1xzs]
+      Select dataset to use: production-cic
+
 4. Run the following command in the root project folder:
    ```bash
    yarn
    ```
+   
+   If downloading packages fails, run
+   ```bash
+   npm i --legacy-peer-deps
+   ```
+5. Create .env.local with values from Netlify.
 
 ## Running on Your Own Device
 
