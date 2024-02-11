@@ -4,7 +4,7 @@
 
 1. Run the following command to clone the project:
    ```bash
-   git clone https://github.com/AndrewWladis/Careers-In-Code-Site.git
+   git clone https://github.com/hackupstate/careersincode-website-nextjs-sanity.git
    ```
 2. Ensure that the Sanity CLI is installed globally.
 3. Run the following commands in the `/studio` folder:
