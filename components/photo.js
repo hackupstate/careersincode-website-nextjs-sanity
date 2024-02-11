@@ -59,14 +59,14 @@ const Photo = ({
     if (isLoaded) onLoad?.()
   }, [isLoaded])
 
-  const [isMobileScreen, setIsMobileScreen] = useState(
-    typeof window !== 'undefined' && window.innerWidth < 700
+  const [screenSize, setScreenSize] = useState(
+    typeof window !== 'undefined' && window.innerWidth
   )
 
-  // update isMobileScreen when window size changes
+  // update screenSize when window size changes
   useEffect(() => {
     function handleResize() {
-      setIsMobileScreen(window.innerWidth < 700)
+      setScreenSize(window.innerWidth)
     }
 
     window.addEventListener('resize', handleResize)
@@ -77,7 +77,7 @@ const Photo = ({
 
   return (
     <figure className={className ? className : null} style={
-      (photo.alt == "Instructor/Student" && isMobileScreen) ? 
+      (photo.alt == "Instructor/Student" && (screenSize <= 700)) ? 
       {
         width: '100%',
         height: '30vh',
@@ -89,10 +89,20 @@ const Photo = ({
         margin: '0'
       }
       :
-      (photo.alt == "Instructor/Student" && !isMobileScreen) ? 
+      (photo.alt == "Instructor/Student" && (1100 >= screenSize > 700)) ? 
       {
         width: '30vw',
         alignSelf: 'center',
+      }
+      :
+      (photo.alt == "Instructor/Student" && (screenSize > 1100)) ? 
+      {
+        alignSelf: 'center',
+        width: '20vw',
+        maxWidth: 350,
+        maxHeight: 350,
+        margin: 0,
+        padding: 0,
       }
       :
       (photo.alt == "Medium Post") ? 
@@ -115,7 +125,7 @@ const Photo = ({
         })}
         style={{
           ...aspectCustom,
-          ...(photo.alt == "Instructor/Student" && isMobileScreen) ? 
+          ...(photo.alt == "Instructor/Student" && (screenSize <= 700)) ? 
           {
             width: '30vw',
             height: '30vh',
@@ -136,7 +146,7 @@ const Photo = ({
             width={width}
             height={height}
             style={
-              (photo.alt == "Instructor/Student" && isMobileScreen) ? 
+              (photo.alt == "Instructor/Student" && (screenSize <= 700)) ? 
               {
                 width: '30vw',
                 height: '30vh',
@@ -148,11 +158,20 @@ const Photo = ({
                 
               }
               :
-              (photo.alt == "Instructor/Student" && !isMobileScreen) ? 
+              (photo.alt == "Instructor/Student" && (1100 >= screenSize > 700)) ? 
               {
                 minWidth: '30vw',
                 minHeight: '30vh',
                 objectFit: 'contain'
+              }
+              :
+              (photo.alt == "Instructor/Student" && (screenSize > 1100)) ? 
+              {
+                width: '20vw',
+                maxWidth: 350,
+                maxHeight: 350,
+                margin: 0,
+                padding: 0,
               }
               :
               (photo.alt == "Medium Post") ? 
