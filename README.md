@@ -17,13 +17,6 @@
    ```bash
    yarn
    ```
-5. Create an `.env.local` file in the project folder and add the following variables:
-   ```env
-   NEXT_PUBLIC_SANITY_PROJECT_DATASET="production-cic"
-   NEXT_PUBLIC_SANITY_PROJECT_ID="z6et1xzs"
-   SANITY_API_TOKEN="skgpopu6idmKArNFwBUZAIQd5uDvEpgx5OUMpT2m5ZGt9Aj0ygwu6HFpQPzcejyxUdIix6QCpwIvEkSIO4U5uTgX3SCb0aZdGjsxh1wgINKl7k4uEQPk82HLlxC3ijFWkNqlvqGWkNA9bfHc9uwNAfQJTQ9ErBmZ0jDlY3uyWxaIYzi7x4P9"
-   SANITY_STUDIO_PREVIEW_SECRET=""
-   ```
 
 ## Running on Your Own Device
 
