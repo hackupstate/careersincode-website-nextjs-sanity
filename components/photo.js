@@ -92,18 +92,19 @@ const Photo = ({
       (photo.alt == "Instructor/Student" && !isMobileScreen) ? 
       {
         width: '30vw',
-        alignSelf: 'center'
+        alignSelf: 'center',
       }
       :
       (photo.alt == "Medium Post") ? 
       {
-        minWidth: '20vw'
+        width: '20vw',
+        maxWidth: 375
       }
       :
       (photo.alt == "Company") ? 
       {
-        minWidth: '20vw',
-        margin: '2vw'
+        width: '20vw',
+        maxWidth: 350
       }
       :
       {}
@@ -118,7 +119,14 @@ const Photo = ({
           {
             width: '30vw',
             height: '30vh',
+            
           }
+          :
+      (photo.alt == "Medium Post") ? 
+      {
+        width: '20vw',
+        maxWidth: 350
+      }
           :
           {}
         }}
@@ -136,7 +144,8 @@ const Photo = ({
                 minHeight: '30vh',
                 maxWidth: '30vw',
                 maxHeight: '30vh',
-                objectFit: 'contain'
+                objectFit: 'contain',
+                
               }
               :
               (photo.alt == "Instructor/Student" && !isMobileScreen) ? 
@@ -144,6 +153,11 @@ const Photo = ({
                 minWidth: '30vw',
                 minHeight: '30vh',
                 objectFit: 'contain'
+              }
+              :
+              (photo.alt == "Medium Post") ? 
+              {
+                maxWidth: 350
               }
               :
               (photo.alt == "Company") ? 
