@@ -12,6 +12,11 @@
     transform: translate3d(-50%, -50%, 0);
     transition: opacity 0.4s linear;
 
+    &[alt="Medium Post"],
+    &[alt="Instructor/Student"] {
+      border-radius: 5%;
+    }
+
     &.is-loaded {
       @apply opacity-100;
     }
