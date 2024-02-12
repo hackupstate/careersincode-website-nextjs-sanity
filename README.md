@@ -45,7 +45,15 @@
    ```bash
    npm i --legacy-peer-deps
    ```
-5. Update the `.env.local` file the values from Netlify [found here](https://app.netlify.com/sites/careersincode/configuration/env#environment-variables). 
+5. Add a `.env.local` file the values from Netlify [found here](https://app.netlify.com/sites/careersincode/configuration/env#environment-variables). 
+
+   ```env
+   NEXT_PUBLIC_SANITY_PROJECT_DATASET=""
+   NEXT_PUBLIC_SANITY_PROJECT_ID=""
+   NPM_FLAGS="--legacy-peer-deps"
+   SANITY_API_TOKEN=""
+   SANITY_STUDIO_PREVIEW_SECRET=""
+   ```
 
 ## Running on Your Own Device
 
