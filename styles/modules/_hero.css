@@ -1,6 +1,6 @@
 .hero {
   @apply grid relative overflow-hidden border-b;
-  min-height: calc(var(--vh, 1vh));
+  min-height: calc(var(--vh, 1vh) + 30);
   
   &--bg {
     @apply relative w-full  h-full;
@@ -22,7 +22,7 @@
 
   &--content {
     @apply w-full max-w-5xl mx-auto px-4 text-center text-white;
-    padding-top: calc((var(--headerHeight) / 2));
-    padding-bottom: calc((var(--headerHeight) / 2));
+    padding-top: calc((var(--headerHeight) / 2) + 3rem);
+    padding-bottom: calc((var(--headerHeight) / 2) + 3rem);
   }
 }
