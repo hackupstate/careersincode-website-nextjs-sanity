@@ -47,7 +47,7 @@
    ```
 5. Add a `.env.local` file the values from Netlify [found here](https://app.netlify.com/sites/careersincode/configuration/env#environment-variables). 
 
-   ```env
+   ```Dotenv
    NEXT_PUBLIC_SANITY_PROJECT_DATASET=""
    NEXT_PUBLIC_SANITY_PROJECT_ID=""
    NPM_FLAGS="--legacy-peer-deps"
