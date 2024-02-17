@@ -1,5 +1,7 @@
 import React from 'react'
 
+// https://icons.getbootstrap.com/ This is where the social media icons are from
+
 const getIcon = (name, color) => {
   switch (name) {
     case 'Logo':
