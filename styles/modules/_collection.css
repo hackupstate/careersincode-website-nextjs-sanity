@@ -1,6 +1,6 @@
 .collection {
   @apply border-b;
-
+  
   &--tools {
     @apply sticky top-[var(--headerHeight)] z-2 flex justify-between bg-pageBG border-b;
   }
@@ -11,7 +11,6 @@
   
   &--grid {
     @apply grid grid-cols-1 md:grid-cols-3 -m-1;
-
 
     &.is-empty {
       @apply grid-cols-1;
